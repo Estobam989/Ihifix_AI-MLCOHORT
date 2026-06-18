@@ -1,0 +1,61 @@
+import os
+import pickle
+import streamlit as st
+from streamlit_option_menu inport option_menu
+
+st.set_page_config(page_title="Health Assistant", layout-"wide", page_icon-"1")
+
+working dir - as.,path.dirnane(os.path, abspath(_file_))
+
+heart_disease_model = pickle.load(open(f'{working_dir}/saved _nodels/heart_disease.
+with st.sidebar:
+
+    selected = option_menu('Disease Predicion System' ,
+                          ['Heart Disease Prediction']
+                          menu_icon='hospital-fill',
+                          icon=['activity', 'heart','person'],
+                          default_index=0)
+
+# Heart Disease Prediction page                          
+if selected =='Heart Disease Prediction':
+    st.title('Heart Disease Prediction using ML')
+    col1,col2,col3= st.columns(3)
+    with col1:
+        age = st,text_input('Age")
+    with col2:
+        sex = st.text_ input('sex')
+    with col3:
+        cp = st.text_input('Chest Pain types')
+    with col1:
+        trestbps = st.text_input('Resting Blood Pressure')
+    with col2:
+        chol = st.text_input('Serum Cholestoral in mg/dl')
+    with col3:
+        fbs = st.text_input('Fasting Blood Sugar > 120 mg/d1')
+    with col1:
+        restecg = st.text_input('Resting Electrocardiographic results')
+    with col2:
+        thalach = st.text_input('Maximum Heart Rate achieved')
+    with col3:
+        exang = st.text_input('Exercise Induced Angina')
+    with col1:
+        oldpeak = st.text_input('ST depression induced by exercise')
+    with col2:
+        slope = st.text_input('slope of the peak exercise st segment')
+    with col3:
+        ca = st.text_input("Major vessels colored by flourosopy")
+    with col1:
+        thal = st.text_input('thal: O = normal; 1 = fixed defect; 2 = reversable score might provide a
+
+heart _diagnosis =''
+if st.button('Heart Disease Test Result'):
+especially if there's a heart disease
+user _input = [age, sex, cp, trestbps, Chol, fbs, restecg,
+              thalach, exang, oldpeak, slope, ca, thal]
+user_input = [float(x) for x in user input]
+The necessary librarie:
+heart _prediction = heart disease model.predict(user _input])
+successfully.Now you can check the
+heart_dlagnosis = 'The person is having heart disease' if heart_prediction
+collection and pracess
+st.success(heart_diagnosis)
